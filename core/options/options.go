@@ -116,10 +116,10 @@ func GetDeviceConfig() *device.EtherTable {
 		gologger.Infof("读取配置%s成功!\n", filename)
 	} else {
 		ether = device.AutoGetDevices()
-		err = ether.SaveConfig(filename)
-		if err != nil {
-			gologger.Fatalf("保存配置失败:%v", err)
-		}
+		//err = ether.SaveConfig(filename)
+		//if err != nil {
+		//	gologger.Fatalf("保存配置失败:%v", err)
+		//}
 	}
 	gologger.Infof("Use Device: %s\n", ether.Device)
 	gologger.Infof("Use IP:%s\n", ether.SrcIp.String())
